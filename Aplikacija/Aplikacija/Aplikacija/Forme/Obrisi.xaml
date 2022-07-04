@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplikacija.Forme.Obrisi"
+             BackgroundColor="Black">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout  Margin="0,30,0,0">
+            <Button x:Name="adm" Text="Administrator" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="adm_Clicked" />
+            <Button x:Name="voz" Text="Vozac" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="voz_Clicked" />
+            <Button x:Name="seff" Text="Sef" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="seff_Clicked" />
+
+            <ListView x:Name="obrisiListAdm" VerticalScrollBarVisibility="Always" IsVisible="False"  ItemsSource="{Binding DataSourceA}" ItemSelected="obrisiListAdm_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout Orientation="Vertical"  >
+                                <Label Text="{Binding id}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Ime}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Sifra}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="obrisiListVoz" VerticalScrollBarVisibility="Always" IsVisible="False"  ItemsSource="{Binding DataSourceV}" ItemSelected="obrisiListVoz_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout Orientation="Vertical"  >
+                                <Label Text="{Binding id}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Ime}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Registracija}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="obrisiListSefa" VerticalScrollBarVisibility="Always" IsVisible="False"  ItemsSource="{Binding DataSourceS}" ItemSelected="obrisiListSefa_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout Orientation="Vertical"  >
+                                <Label Text="{Binding id}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Ime}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Sifra}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

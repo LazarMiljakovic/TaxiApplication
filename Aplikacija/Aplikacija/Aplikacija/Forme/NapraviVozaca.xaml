@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplikacija.Forme.NapraviVozaca">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout>
+            <Entry x:Name="Id" Placeholder="Id"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Ime" Placeholder="Ime"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Prezime" Placeholder="Prezime"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Registracija" Placeholder="Registracija"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Vrsta" Placeholder="Vrsta"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Vozilo" Placeholder="Vozilo"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Sifra" Placeholder="Šifra" IsPassword="True" ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+                       
+            <Button x:Name="NapraviVozac" Text="Napravi nalog Vozaca" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="NapraviVozac_Clicked" />
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

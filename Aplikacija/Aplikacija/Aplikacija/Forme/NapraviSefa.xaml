@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplikacija.Forme.NapraviSefa">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout>
+            <Entry x:Name="Id" Placeholder="Id"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Ime" Placeholder="Ime"  ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Entry x:Name="Sifra" Placeholder="Šifra" IsPassword="True" ClearButtonVisibility="WhileEditing"  PlaceholderColor="#8a8a8a" FontFamily="Helvetica"  TextColor="Black"  />
+            <Button x:Name="NapraviSef" Text="Napravi nalog Sefa" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="NapraviSefa_Clicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

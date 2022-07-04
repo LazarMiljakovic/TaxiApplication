@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplikacija.Page1"
+             BackgroundColor="White">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout Margin="20,60,20,25" >
+            <Image Source="logoT.png"  />
+            <Entry x:Name="TelefonR" Placeholder="Broj telefona" Keyboard="Numeric" ClearButtonVisibility="WhileEditing" PlaceholderColor="#8a8a8a" TextColor="Black" FontFamily="Helvetica" Margin="0,50,0,0" />
+            <Rectangle HorizontalOptions="Fill" Fill="#8a8a8a" HeightRequest="3" Margin="0,-10,0,20"/>
+            <Entry x:Name="ImeR" Placeholder="Ime" Keyboard="Text" ClearButtonVisibility="WhileEditing" PlaceholderColor="#8a8a8a" FontFamily="Helvetica" TextColor="Black" Margin="0,0,0,0" />
+            <Rectangle HorizontalOptions="Fill" Fill="#8a8a8a" HeightRequest="3" Margin="0,-10,0,20"/>
+            <Entry x:Name="PrezimeR" Placeholder="Prezime" Keyboard="Text" ClearButtonVisibility="WhileEditing" PlaceholderColor="#8a8a8a" FontFamily="Helvetica" TextColor="Black" Margin="0,0,0,0" />
+            <Rectangle HorizontalOptions="Fill" Fill="#8a8a8a" HeightRequest="3" Margin="0,-10,0,20"/>
+            <Entry x:Name="EmailR" Placeholder="Email" Keyboard="Email" ClearButtonVisibility="WhileEditing" PlaceholderColor="#8a8a8a" FontFamily="Helvetica" TextColor="Black" Margin="0,0,0,0" />
+            <Rectangle HorizontalOptions="Fill" Fill="#8a8a8a" HeightRequest="3" Margin="0,-10,0,20"/>
+            <Entry x:Name="SifraR" Placeholder="Šifra" IsPassword="True" ClearButtonVisibility="WhileEditing" PlaceholderColor="#8a8a8a" FontFamily="Helvetica" TextColor="Black"  />
+            <Rectangle HorizontalOptions="Fill" Fill="#8a8a8a" HeightRequest="3" Margin="0,-10,0,50"/>
+
+            <Button Text="Napravi nalog" Background="#ffc100" CornerRadius="40" TextColor="White" FontFamily="Helvetica" FontAttributes="Bold" FontSize="19" Clicked="NapraviNalog" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

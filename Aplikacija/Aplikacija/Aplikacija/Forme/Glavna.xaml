@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="Aplikacija.Glavna"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+
+        <StackLayout Margin="2,6,2,2" >
+            
+            <Button x:Name="saL" BackgroundColor="#ffc100" Text="Sa lokacije" TextColor="Black" FontFamily="Helvetica"   HorizontalOptions="FillAndExpand" Clicked="SaLokacije"/>
+            <Button x:Name="naL" BackgroundColor="#ffc100" Text="Na lokaciju" TextColor="Black" FontFamily="Helvetica"   HorizontalOptions="FillAndExpand" />
+            <maps:Map x:Name="map" VerticalOptions="FillAndExpand"  HasZoomEnabled="True">
+            </maps:Map>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label x:Name="Cena" Text="Cena voznje" TextColor="White" HorizontalOptions="Center" FontSize="20" Grid.Column="0" FontFamily="Helvetica" VerticalOptions="Center"/>
+                <Button x:Name="Pronadji" BackgroundColor="#ffc100" Text="Pronadji vozaca" TextColor="Black" FontFamily="Helvetica" Grid.Column="1"  HorizontalOptions="FillAndExpand" Clicked="Pronadji_Clicked"/>
+
+            </Grid>
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

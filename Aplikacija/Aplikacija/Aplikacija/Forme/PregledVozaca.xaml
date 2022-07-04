@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplikacija.Forme.PregledVozaca"
+             BackgroundColor="Black">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout>
+            <ListView x:Name="listavozaca" VerticalScrollBarVisibility="Always" IsVisible="True"  ItemsSource="{Binding DataSourceV}" Refreshing="listavozaca_Refreshing" RefreshControlColor="#ffc100" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout Orientation="Vertical"  >
+                                <Label Text="{Binding id}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Ime}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Prezime}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Registracija}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Vozilo}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding Vrsta}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding sifra}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="Aplikacija.StranaVozaca"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Margin="2,6,2,2">
+            <Grid Margin="0,20,0,20"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label x:Name="Online" Text="ONLINE" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="20" Grid.Column="0" FontFamily="Helvetica" VerticalOptions="Center"/>
+               
+                <Switch IsToggled="false" x:Name="upal" HorizontalOptions="CenterAndExpand"  Grid.Column="1" ThumbColor="Red" IsEnabled="False"/>
+                
+            </Grid>
+            <Label x:Name="lokac" Text="Lokacija" TextColor="White"  HorizontalOptions="CenterAndExpand" IsVisible="False" FontSize="20"  FontFamily="Helvetica" VerticalOptions="Center"/>
+            <maps:Map x:Name="map" VerticalOptions="FillAndExpand"  HasZoomEnabled="True">
+            </maps:Map>
+            <Label x:Name="zarad" HorizontalOptions="Center" Text="Zarada" IsVisible="False" TextColor="White" FontFamily="Helvetica" FontSize="35" />
+            <ListView x:Name="zaradlist" VerticalScrollBarVisibility="Always" IsVisible="False"  ItemsSource="{Binding DataSource}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout Orientation="Vertical"  >
+                                <Label Text="{Binding Pocetak}" TextColor="White" FontFamily="Helvetica"   FontSize="20"/>
+                                <Label Text="{Binding cena}" TextColor="Green" FontFamily="Helvetica"  FontSize="20" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="stig" BackgroundColor="#ffc100" Text="Stigao" IsVisible="False" TextColor="Black" FontFamily="Helvetica"  HorizontalOptions="FillAndExpand" Clicked="stig_Clicked"/>
+            <Button x:Name="pocni" BackgroundColor="#ffc100" Text="Pocni voznju" IsVisible="False" TextColor="Black" FontFamily="Helvetica"  HorizontalOptions="FillAndExpand" Clicked="pocni_Clicked"/>
+            <Button x:Name="zavrsi" BackgroundColor="#ffc100" Text="Zavrsi voznju" IsVisible="False" TextColor="Black" FontFamily="Helvetica"  HorizontalOptions="FillAndExpand" Clicked="zavrsi_Clicked"/>
+            <Button x:Name="otkazi" BackgroundColor="#ffc100" Text="Otkazi voznju" IsVisible="False" TextColor="Black" FontFamily="Helvetica"  HorizontalOptions="FillAndExpand" Clicked="otkazi_Clicked"/>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    
+                </Grid.RowDefinitions>
+                <Button x:Name="gl" BackgroundColor="#ffc100" Text="Glavna" TextColor="Black" FontFamily="Helvetica" Grid.Column="0"  HorizontalOptions="FillAndExpand" Clicked="gl_Clicked"/>
+                <Button x:Name="zar" BackgroundColor="#ffc100" Text="Zarada" TextColor="Black" FontFamily="Helvetica" Grid.Column="1"   HorizontalOptions="FillAndExpand" Clicked="zar_Clicked"/>
+                <Button x:Name="online" BackgroundColor="#ffc100" Text="Online" TextColor="Black" FontFamily="Helvetica" Grid.Column="2"   HorizontalOptions="FillAndExpand" Clicked="online_Clicked"/>
+
+            </Grid>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
