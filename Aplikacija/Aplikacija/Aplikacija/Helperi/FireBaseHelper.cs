@@ -12,9 +12,7 @@ namespace Aplikacija.Helperi
     public class FireBaseHelper
     {
 
-        public static string FB = "1fKOogoINaf8GtfcitE87Tw5hGX7zGGMekTqslN0";
-        FirebaseClient firebase = new FirebaseClient("https://taxiapp-6909e-default-rtdb.europe-west1.firebasedatabase.app/",new FirebaseOptions { AuthTokenAsyncFactory = () => Task.FromResult(FB)});
-        
+       
 
         public async Task PozoviVoznju(Voznja voznja)
         {
